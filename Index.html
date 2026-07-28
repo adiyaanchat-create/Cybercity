@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NEON MERIDIAN — Prototype</title>
+<link rel="stylesheet" href="style.css" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
 
+  <div id="boot-screen">
+    <div id="boot-title">NEON MERIDIAN</div>
+    <div id="boot-sub">core engine — v1 prototype</div>
+    <div id="boot-bar-track"><div id="boot-bar-fill"></div></div>
+    <div id="boot-status">initializing renderer…</div>
+  </div>
+
+  <div id="blocker">
+    <div id="blocker-panel">
+      <h1>NEON MERIDIAN</h1>
+      <p class="blocker-desc">An original cyberpunk-inspired city, generated in your browser. No copyrighted assets — purely procedural.</p>
+      <button id="start-btn">CLICK TO ENTER</button>
+      <div class="controls-hint">
+        <div><span>WASD</span> move</div>
+        <div><span>SHIFT</span> sprint</div>
+        <div><span>CTRL</span> crouch</div>
+        <div><span>SPACE</span> jump</div>
+        <div><span>V</span> camera view</div>
+        <div><span>ESC</span> pause / release mouse</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="hud">
+    <div id="hud-topleft">
+      <div id="fps">FPS —</div>
+      <div id="clock-readout">00:00</div>
+    </div>
+    <div id="hud-crosshair"></div>
+    <div id="hud-bottom">
+      <div class="stat-bar" id="health-bar"><div class="stat-fill" id="health-fill"></div><span class="stat-label">HEALTH</span></div>
+      <div class="stat-bar" id="stamina-bar"><div class="stat-fill" id="stamina-fill"></div><span class="stat-label">STAMINA</span></div>
+    </div>
+    <div id="view-mode-readout">3RD PERSON</div>
+  </div>
+
+  <canvas id="game-canvas"></canvas>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
